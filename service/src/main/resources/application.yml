@@ -1,0 +1,30 @@
+logging:
+     file: union-despository-server
+     path: /data/appLogs
+
+spring:
+    datasource:
+        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql://10.5.202.245:3306/union-despository?allowMultiQueries=true&zeroDateTimeBehavior=convertToNull&characterEncoding=UTF-8
+        username: root
+        password: root123@ShanLin!
+    redis:
+        database: 7
+        host: 120.55.53.255
+        port: 6379
+        password:
+        pool:
+          max-active: 8
+          max-wait: -1
+          max-idle: 8
+          min-idle: 0
+        timeout: 0
+#spring boot mybatis
+
+
+mybatis:
+    config-location: classpath:/spring/mybatis.xml
+#mybatis.mapper-locations=classpath:mapper/*.xml
+#mybatis.type-aliases-package=  tk.mapper.model
+
+#spring Redis
